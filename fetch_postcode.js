@@ -8,7 +8,7 @@ var fs       = require( 'fs');
 
 var input    = 'http://www.post.japanpost.jp/zipcode/dl/kogaki/zip/ken_all.zip';
 
-var request  = http.get( url.parse(input), function(res) {
+http.get( url.parse(input), function(res) {
     res
 	.pipe( fs.createWriteStream(path.basename(input)) )
 	.on('error', function(e){
